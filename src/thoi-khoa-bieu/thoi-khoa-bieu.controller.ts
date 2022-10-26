@@ -20,5 +20,4 @@ export class ThoiKhoaBieuController {
     }
     return result;
   }
-  @Put
 }
