@@ -1,4 +1,3 @@
-
 import {
   Controller,
   Get,
@@ -6,10 +5,8 @@ import {
   HttpStatus,
   Post,
   Req,
-  Controller, Get, Param
+  Param,
 } from '@nestjs/common';
-
-
 
 import { thoiKhoaBieu } from './thoi-khoa-bieu.interface';
 import * as thoiKhoaBieuData from './thoiKhoaBieu.json';
@@ -35,7 +32,7 @@ export class ThoiKhoaBieuController {
       throw new HttpException(result.message, HttpStatus.NOT_FOUND);
     }
     return result;
-
+  }
 
   @Get(':id')
   findOne(@Param() params): thoiKhoaBieu {
@@ -49,6 +46,5 @@ export class ThoiKhoaBieuController {
     return thoiKhoaBieuData.thoiKhoaBieu.filter(
       (tkb) => tkb.id_sinh_vien === Number(params.id),
     );
-
   }
 }
