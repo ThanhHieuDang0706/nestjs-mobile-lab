@@ -1,0 +1,62 @@
+{
+    "thoiKhoaBieu": [
+        {
+            "id": 1,
+            "id_sinh_vien": 1,
+            "hoc_ky": 212,
+            "nam_hoc": 2021,
+            "mon_hoc": [
+                {
+                    "id": 1,
+                    "ten_mon_hoc": "Toán",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A1",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                },
+                {
+                    "id": 2,
+                    "ten_mon_hoc": "Lý",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A2",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                },
+                {
+                    "id": 3,
+                    "ten_mon_hoc": "Hóa",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A3",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "id_sinh_vien": 1,
+            "hoc_ky": 211,
+            "nam_hoc": 2021,
+            "mon_hoc": [
+                {
+                    "id": 4,
+                    "ten_mon_hoc": "Toán cao cap",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A1",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                },
+                {
+                    "id": 5,
+                    "ten_mon_hoc": "Lý dai cuong",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A2",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                },
+                {
+                    "id": 6,
+                    "ten_mon_hoc": "Sinh hoc",
+                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+                    "phong_hoc": "A3",
+                    "tiet_hoc": "1, 2, 3, 4, 5"
+                }
+            ]
+        }
+    ]
+}
