@@ -1,4 +1,11 @@
-import { Controller, Get, HttpException, HttpStatus, Post, Req  } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  HttpException,
+  HttpStatus,
+  Post,
+  Req,
+} from '@nestjs/common';
 import { thoiKhoaBieu } from './thoi-khoa-bieu.interface';
 import * as thoiKhoaBieuData from './thoiKhoaBieu.json';
 import { Request } from 'express';
@@ -14,7 +21,10 @@ export class ThoiKhoaBieuController {
   @Post('/:studentId/add')
   addNewSchedule(@Req() request: Request): thoiKhoaBieu | any {
     const { studentId } = request.params;
-    const result = this.scheduleService.addSchedule(request.body, parseInt(studentId));
+    const result = this.scheduleService.addSchedule(
+      request.body,
+      parseInt(studentId),
+    );
     if (result && result.statusCode) {
       throw new HttpException(result.message, HttpStatus.NOT_FOUND);
     }
