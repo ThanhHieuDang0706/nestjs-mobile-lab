@@ -1,3 +1,4 @@
+
 import {
   Controller,
   Get,
@@ -5,7 +6,11 @@ import {
   HttpStatus,
   Post,
   Req,
+  Controller, Get, Param
 } from '@nestjs/common';
+
+
+
 import { thoiKhoaBieu } from './thoi-khoa-bieu.interface';
 import * as thoiKhoaBieuData from './thoiKhoaBieu.json';
 import { Request } from 'express';
@@ -18,6 +23,7 @@ export class ThoiKhoaBieuController {
   findAll(): thoiKhoaBieu[] {
     return thoiKhoaBieuData.thoiKhoaBieu;
   }
+
   @Post('/:studentId/add')
   addNewSchedule(@Req() request: Request): thoiKhoaBieu | any {
     const { studentId } = request.params;
@@ -29,5 +35,20 @@ export class ThoiKhoaBieuController {
       throw new HttpException(result.message, HttpStatus.NOT_FOUND);
     }
     return result;
+
+
+  @Get(':id')
+  findOne(@Param() params): thoiKhoaBieu {
+    return thoiKhoaBieuData.thoiKhoaBieu.find(
+      (tkb) => tkb.id === Number(params.id),
+    );
+  }
+
+  @Get('sinh-vien/:id')
+  findTKBBySinhVien(@Param() params): thoiKhoaBieu[] {
+    return thoiKhoaBieuData.thoiKhoaBieu.filter(
+      (tkb) => tkb.id_sinh_vien === Number(params.id),
+    );
+
   }
 }

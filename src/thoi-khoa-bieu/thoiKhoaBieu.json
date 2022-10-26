@@ -8,55 +8,84 @@
             "mon_hoc": [
                 {
                     "id": 1,
-                    "ten_mon_hoc": "Toán",
+                    "ten_mon_hoc": "Mô hình hoá toán học",
                     "thoi_gian": "Thứ 2, 3, 4, 5, 6",
                     "phong_hoc": "A1",
                     "tiet_hoc": "1, 2, 3, 4, 5"
                 },
                 {
                     "id": 2,
-                    "ten_mon_hoc": "Lý",
+                    "ten_mon_hoc": "Vật lý 2",
                     "thoi_gian": "Thứ 2, 3, 4, 5, 6",
                     "phong_hoc": "A2",
                     "tiet_hoc": "1, 2, 3, 4, 5"
                 },
                 {
                     "id": 3,
-                    "ten_mon_hoc": "Hóa",
+                    "ten_mon_hoc": "Đại số tuyến tính",
                     "thoi_gian": "Thứ 2, 3, 4, 5, 6",
                     "phong_hoc": "A3",
                     "tiet_hoc": "1, 2, 3, 4, 5"
                 }
             ]
         },
-        {
-            "id": 2,
-            "id_sinh_vien": 1,
-            "hoc_ky": 211,
-            "nam_hoc": 2021,
-            "mon_hoc": [
-                {
-                    "id": 4,
-                    "ten_mon_hoc": "Toán cao cap",
-                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
-                    "phong_hoc": "A1",
-                    "tiet_hoc": "1, 2, 3, 4, 5"
-                },
-                {
-                    "id": 5,
-                    "ten_mon_hoc": "Lý dai cuong",
-                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
-                    "phong_hoc": "A2",
-                    "tiet_hoc": "1, 2, 3, 4, 5"
-                },
-                {
-                    "id": 6,
-                    "ten_mon_hoc": "Sinh hoc",
-                    "thoi_gian": "Thứ 2, 3, 4, 5, 6",
-                    "phong_hoc": "A3",
-                    "tiet_hoc": "1, 2, 3, 4, 5"
-                }
-            ]
-        }
+      {
+        "id": 2,
+        "id_sinh_vien": 1,
+        "hoc_ky": 211,
+        "nam_hoc": 2021,
+        "mon_hoc": [
+          {
+            "id": 4,
+            "ten_mon_hoc": "Giải tích 2",
+            "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+            "phong_hoc": "A1",
+            "tiet_hoc": "1, 2, 3, 4, 5"
+          },
+          {
+            "id": 5,
+            "ten_mon_hoc": "Hoá đại cương",
+            "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+            "phong_hoc": "A2",
+            "tiet_hoc": "1, 2, 3, 4, 5"
+          },
+          {
+            "id": 6,
+            "ten_mon_hoc": "Vật lý 1",
+            "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+            "phong_hoc": "A3",
+            "tiet_hoc": "1, 2, 3, 4, 5"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "id_sinh_vien": 1,
+        "hoc_ky": 201,
+        "nam_hoc": 2020,
+        "mon_hoc": [
+          {
+            "id": 7,
+            "ten_mon_hoc": "Nhap mon lap trinh",
+            "thoi_gian": "Thứ 2, 4, 6",
+            "phong_hoc": "H1 - 602",
+            "tiet_hoc": "1, 2, 3, 4, 5"
+          },
+          {
+            "id": 8,
+            "ten_mon_hoc": "He co so du lieu",
+            "thoi_gian": "Thứ 3, 5, 6",
+            "phong_hoc": "H6 - 405",
+            "tiet_hoc": "1, 2, 3"
+          },
+          {
+            "id": 9,
+            "ten_mon_hoc": "Giai tich 1",
+            "thoi_gian": "Thứ 2, 3, 4, 5, 6",
+            "phong_hoc": "H1 - 104",
+            "tiet_hoc": "1, 2, 3, 4, 5"
+          }
+        ]
+      }
     ]
 }
