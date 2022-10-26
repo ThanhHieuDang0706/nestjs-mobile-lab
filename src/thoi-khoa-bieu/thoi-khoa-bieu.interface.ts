@@ -13,3 +13,12 @@ export interface thoiKhoaBieu {
   nam_hoc: number;
   mon_hoc: monHoc[];
 }
+
+export interface ScheduleData {
+  hoc_ky: number;
+  nam_hoc: number;
+  ten_mon_hoc: string;
+  thoi_gian: string;
+  phong_hoc: string;
+  tiet_hoc: string;
+}
