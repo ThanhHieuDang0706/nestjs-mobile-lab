@@ -1,12 +1,12 @@
 import {
-  Controller,
-  Get,
   HttpException,
   HttpStatus,
   Post,
   Req,
   Param,
   Body,
+  Controller,
+  Get,
 } from '@nestjs/common';
 
 import { thoiKhoaBieu } from './thoi-khoa-bieu.interface';
