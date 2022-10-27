@@ -29,4 +29,7 @@ export class ScheduleService {
       message: 'This studentId is not existed',
     };
   }
+  findAllSchedule(): thoiKhoaBieu[] {
+    return thoiKhoaBieuData.thoiKhoaBieu;
+  }
 }

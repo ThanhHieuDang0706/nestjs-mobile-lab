@@ -58,3 +58,10 @@ export class ScheduleDataDTO {
   })
   mon_hoc: monHoc[];
 }
+
+export class StudentIdParamDTO {
+  @ApiProperty({
+    required: true
+  })
+  id: number
+}

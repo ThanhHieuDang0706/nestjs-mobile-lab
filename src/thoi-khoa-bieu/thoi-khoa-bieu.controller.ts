@@ -12,17 +12,26 @@ import {
 import { thoiKhoaBieu } from './thoi-khoa-bieu.interface';
 import * as thoiKhoaBieuData from './thoiKhoaBieu.json';
 import { ScheduleService } from './thoi-khoa-bieu.service';
-import { CreateScheduleDTO, ScheduleDataDTO } from './create-thoi-khoi-bieu.dto';
-import { ApiCreatedResponse } from '@nestjs/swagger';
+import { CreateScheduleDTO, ScheduleDataDTO, StudentIdParamDTO } from './create-thoi-khoi-bieu.dto';
+import { ApiCreatedResponse, ApiOkResponse, ApiParam } from '@nestjs/swagger';
+import { identity } from 'rxjs';
 @Controller('thoi-khoa-bieu')
 export class ThoiKhoaBieuController {
   constructor(private readonly scheduleService: ScheduleService) {}
   @Get()
+  @ApiOkResponse({
+    type: [ScheduleDataDTO]
+  })
   findAll(): thoiKhoaBieu[] {
-    return thoiKhoaBieuData.thoiKhoaBieu;
+    return this.scheduleService.findAllSchedule();
   }
 
   @Post('/:studentId/add')
+  @ApiParam({
+    name: 'studentId',
+    type: Number,
+    required: true
+  })
   @ApiCreatedResponse({
     description: 'New schedule created successfully',
     type: ScheduleDataDTO
@@ -40,6 +49,14 @@ export class ThoiKhoaBieuController {
   }
 
   @Get(':id')
+  @ApiParam({
+    name: 'id',
+    type: Number,
+    required: true
+  })
+  @ApiOkResponse({
+    type: ScheduleDataDTO
+  })
   findOne(@Param() params): thoiKhoaBieu {
     return thoiKhoaBieuData.thoiKhoaBieu.find(
       (tkb) => tkb.id === Number(params.id),
@@ -47,6 +64,14 @@ export class ThoiKhoaBieuController {
   }
 
   @Get('sinh-vien/:id')
+  @ApiParam({
+    name: 'id',
+    type: Number,
+    required: true
+  })
+  @ApiOkResponse({
+    type: ScheduleDataDTO
+  })
   findTKBBySinhVien(@Param() params): thoiKhoaBieu[] {
     return thoiKhoaBieuData.thoiKhoaBieu.filter(
       (tkb) => tkb.id_sinh_vien === Number(params.id),
